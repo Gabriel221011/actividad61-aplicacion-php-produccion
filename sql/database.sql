@@ -12,7 +12,9 @@ CREATE TABLE IF NOT EXISTS `usuarios` (
   `nombre_usuario` VARCHAR(100) NOT NULL,
   `contrasena` VARCHAR(255) NOT NULL,
   `correo` VARCHAR(150) NOT NULL,
-  `creacion` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP
+  `creacion` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  UNIQUE KEY `unique_usuario` (`nombre_usuario`),
+  UNIQUE KEY `unique_correo` (`correo`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- Main table: cartas_clash_royale
