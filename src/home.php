@@ -14,11 +14,15 @@ $result = $mysqli->query('SELECT * FROM cartas_clash_royale ORDER BY cartas_clas
     <meta charset="utf-8">
     <title>Cartas - Clash Royale</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
-<body class="p-4">
-<nav class="navbar navbar-expand-lg navbar-light bg-light mb-3">
+<body>
+<nav class="navbar navbar-expand-lg">
   <div class="container-fluid">
-    <a class="navbar-brand" href="home.php">Clash Royale</a>
+    <a class="navbar-brand" href="home.php">
+      <img src="https://static.wikia.nocookie.net/clashroyale/images/0/0f/Clash_Royale_Logo.png" alt="Logo">
+      Clash Royale
+    </a>
     <div class="collapse navbar-collapse">
       <ul class="navbar-nav ms-auto">
         <li class="nav-item"><span class="nav-link">Usuario: <?php echo htmlspecialchars($_SESSION['user']); ?></span></li>
@@ -27,9 +31,10 @@ $result = $mysqli->query('SELECT * FROM cartas_clash_royale ORDER BY cartas_clas
     </div>
   </div>
 </nav>
+<div class="container">
 <h1>Cartas Clash Royale</h1>
 <p><a class="btn btn-primary" href="add.php">Agregar carta</a></p>
-<table class="table table-bordered">
+<table class="table table-bordered table-striped">
 <tr><th>ID</th><th>Nombre</th><th>Rareza</th><th>Nivel</th><th>Coste</th><th>Acciones</th></tr>
 <?php while($row = $result->fetch_assoc()): ?>
 <tr>
@@ -45,5 +50,6 @@ $result = $mysqli->query('SELECT * FROM cartas_clash_royale ORDER BY cartas_clas
 </tr>
 <?php endwhile; ?>
 </table>
+</div>
 </body>
 </html>

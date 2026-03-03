@@ -1,7 +1,8 @@
 **Proyecto:** Aplicación CRUD en PHP (Cartas Clash Royale)
 
 La aplicación está dockerizada con un contenedor MariaDB y un contenedor PHP/Apache.
-Utiliza Bootstrap 5 para el diseño y una imagen/logo de Clash Royale en la cabecera.
+Utiliza Bootstrap 5 y una hoja de estilos propia (`src/style.css`) para darle una apariencia temática
+inspirada en **Clash Royale**; se incluyen logotipos, fondos y colores del juego.
 
 - **Cómo levantar (local con Docker):**
 
@@ -9,7 +10,9 @@ Utiliza Bootstrap 5 para el diseño y una imagen/logo de Clash Royale en la cabe
 docker compose up --build
 ```
 
-- Abre el navegador en http://localhost:8080, regístrate, inicia sesión y realiza altas/bajas/modificaciones.
+- Abre el navegador en http://localhost:8080 (o en tu nombre personalizado, por ejemplo
+  http://clashroyale.local:8080 —añade ese host en `/etc/hosts` apuntando a `127.0.0.1`),
+  regístrate, inicia sesión y realiza altas/bajas/modificaciones.
 
 - **Notas de seguridad:**
   - Las contraseñas se almacenan como hash usando `password_hash()`.

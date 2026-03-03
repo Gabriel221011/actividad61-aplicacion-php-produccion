@@ -1,0 +1,52 @@
+/* Basic Clash Royale theme */
+body {
+    background: url('https://static.wikia.nocookie.net/clashroyale/images/6/6f/Clash_Royale_background.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: #fff;
+}
+
+.navbar {
+    background-color: rgba(0,0,0,0.6) !important;
+}
+
+.container, .card, form, table {
+    background: rgba(0,0,0,0.6);
+    color: #fff;
+}
+
+.navbar-brand {
+    font-family: 'Audiowide', cursive;
+    font-size: 1.5rem;
+    color: #ffd700 !important;
+}
+
+.navbar-brand img {
+    height: 40px;
+    margin-right: 8px;
+    vertical-align: middle;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    text-shadow: 1px 1px 2px #000;
+}
+
+.btn-primary {
+    background-color: #ffcb05;
+    border-color: #ffcb05;
+    color: #000;
+}
+
+.btn-secondary {
+    background-color: #3c3f41;
+    border-color: #3c3f41;
+    color: #fff;
+}
+
+.table {
+    color: #fff;
+}
+
+/* card images in table if added later */
+.card-img {
+    height: 50px;
+}

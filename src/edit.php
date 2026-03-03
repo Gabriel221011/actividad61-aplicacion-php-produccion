@@ -16,9 +16,18 @@ $row = $res->fetch_assoc();
     <meta charset="utf-8">
     <title>Editar Carta</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
-<body class="p-4">
-<img src="https://static.wikia.nocookie.net/clashroyale/images/0/0f/Clash_Royale_Logo.png" alt="Clash Royale" style="height:60px;"/>
+<body>
+<nav class="navbar navbar-expand-lg">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="home.php">
+      <img src="https://static.wikia.nocookie.net/clashroyale/images/0/0f/Clash_Royale_Logo.png" alt="Logo">
+      Clash Royale
+    </a>
+  </div>
+</nav>
+<div class="container">
 <h1 class="mt-3">Editar Carta</h1>
 <form action="edit_action.php" method="post" class="row g-3">
   <input type="hidden" name="id" value="<?php echo $row['cartas_clash_royale_id']; ?>">
@@ -59,5 +68,6 @@ $row = $res->fetch_assoc();
     <button type="button" class="btn btn-secondary" onclick="window.location='home.php'">Cancelar</button>
   </div>
 </form>
+</div>
 </body>
 </html>
